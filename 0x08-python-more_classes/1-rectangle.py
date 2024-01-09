@@ -19,7 +19,7 @@ class Rectangle:
     def width(self, value):
         """
         Set the width of the rectangle.
-        
+
         Args:
             value (int): The width of the rectangle.
 
