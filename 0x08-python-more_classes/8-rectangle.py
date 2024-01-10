@@ -96,8 +96,8 @@ class Rectangle:
         Return the biggest rectangle based on the area.
 
         Args:
-            rect_1: The first rectangle
-            rect_2: The second rectangle.
+            rect_1 (Rectangle): The first rectangle
+            rect_2 (Rectangle): The second rectangle.
 
         Returns:
             The rectangle with the biggest area.
