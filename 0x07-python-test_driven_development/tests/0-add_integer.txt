@@ -1,19 +1,20 @@
 #!/usr/bin/python3
-def test_add_integer(a, b=98):
+import unittest
+from 0-add_integer import add_integer
+
+class TestAddInteger(unittest.TestCase):
     """
-    Function to add two numbers
-
-    Parameters:
-    a (int, float): The first number
-    b (int, float): The second number, default is 98
-
-    Returns:
-    int: The sum of a and b
+    Test cases for the add_integer function
     """
+    def test_add_integer(self):
+        self.assertEqual(add_integer(1,2), 3)
+        self.assertEqual(add_integer(100, 200), 300)
+        self.assertEqual(add_integer(3.5, 2.5), 5)
+        self.assertEqual(add_integer(98), 196)
+        with self.assertRaises(TypeError):
+            add_integer("100", 200)
+        with self.assertRaises(TypeError):
+            add_integer(100, "200")
 
-    if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer")
-
-    return int(a) + int(b)
+if __name__ == '__main__':
+    unittest.main()
