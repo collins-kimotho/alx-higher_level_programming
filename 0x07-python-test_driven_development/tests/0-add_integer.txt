@@ -1,20 +1,27 @@
-#!/usr/bin/python3
-import unittest
-from 0-add_integer import add_integer
-
-class TestAddInteger(unittest.TestCase):
-    """
-    Test cases for the add_integer function
-    """
-    def test_add_integer(self):
-        self.assertEqual(add_integer(1,2), 3)
-        self.assertEqual(add_integer(100, 200), 300)
-        self.assertEqual(add_integer(3.5, 2.5), 5)
-        self.assertEqual(add_integer(98), 196)
-        with self.assertRaises(TypeError):
-            add_integer("100", 200)
-        with self.assertRaises(TypeError):
-            add_integer(100, "200")
-
-if __name__ == '__main__':
-    unittest.main()
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(10.1, 2)
+12
+>>> add_integer(-10, 5)
+-5
+>>> add_integer("hello", 10)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(10, "hello")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer(2, )
+100
+>>> add_integer(25.6, 29.43)
+54
+>>> add_integer(float('inf'), 15)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float('NaN'))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
