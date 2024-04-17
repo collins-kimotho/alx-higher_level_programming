@@ -1,0 +1,39 @@
+# File: tests/test_base_geometry.txt
+"""
+This is the test case for the 'BaseGeometry' class in the '7-base_geometry' module.
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Test instantiation
+>>> bg = BaseGeometry()
+>>> isinstance(bg, BaseGeometry)
+True
+
+# Test 'area' method raises an Exception
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+# Test 'integer_validator' method with valid input
+>>> bg.integer_validator("test", 1)
+>>> bg.integer_validator("test", 100)
+>>> bg.integer_validator("test", 999999)
+
+# Test 'integer_validator' method raises TypeError
+>>> bg.integer_validator("test", "not an integer")
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+
+# Test 'integer_validator' method raises ValueError
+>>> bg.integer_validator("test", 0)
+Traceback (most recent call last):
+...
+ValueError: test must be greater than 0
+>>> bg.integer_validator("test", -1)
+Traceback (most recent call last):
+...
+ValueError: test must be greater than 0
+"""
+
