@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module demonstrates the creation of a python project
+"""
 
 def lookup(obj):
     """
@@ -6,7 +9,8 @@ def lookup(obj):
 
     Args:
         obj: The object to inspect.
+
     Returns:
-        A list of the names of the available attributes and methods of the obj
+        List of available attributes and methods of an object.
     """
     return dir(obj)
