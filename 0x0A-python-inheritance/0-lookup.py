@@ -3,6 +3,7 @@
 This module demonstrates the creation of a python project
 """
 
+
 def lookup(obj):
     """
     Returns the list of available attributes and methods of an object.
