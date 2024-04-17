@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """This is the '4-inherits_from' module"""
 
 
