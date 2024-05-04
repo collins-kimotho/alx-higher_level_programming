@@ -11,7 +11,6 @@ def from_json_string(my_str):
 
     Args:
         my_str (str): The JSON string to convert to python object.
-        
     Returns:
         The python data structure represented by my_str
     """
