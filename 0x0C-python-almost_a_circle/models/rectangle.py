@@ -84,7 +84,7 @@ class Rectangle(Base):
         """Returns the string rep of the rectangle instance"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}"
-    
+
     def update(self, *args, **kwargs):
         """Method that assigns an argument to each attribute"""
         attributes = ['id', 'width', 'height', 'x', 'y']
