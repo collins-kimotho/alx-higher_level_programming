@@ -32,7 +32,7 @@ class Square(Rectangle):
         if args and len(args) > 0:
             for i, args in enumerate(args):
                 if i < len(attributes):
-                    setattr(self, attributes[i], arg)
+                    setattr(self, attributes[i], args)
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
