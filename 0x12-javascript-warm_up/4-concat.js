@@ -1,4 +1,3 @@
 #!/usr/bin/node
-if (process.argv[2] && process.argv[3]) {
-  console.log(`${process.argv[2]} is ${process.argv[3]}`);
-}
+var arg = process.argv;
+console.log(arg[2] + ' is ' + arg[3]);
