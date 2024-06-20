@@ -1,3 +1,2 @@
 #!/usr/bin/node
-exports.add = function() {
-  return a + b;
+exports.add = (a, b) => a + b;
