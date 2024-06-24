@@ -2,7 +2,7 @@
 
 class Rectangle {
   // Constructor and other methods will go here
-  constructor(w, h) {
+  constructor (w, h) {
     this.width = w;
     this.height = h;
   }
