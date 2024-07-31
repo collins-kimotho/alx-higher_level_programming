@@ -1,20 +1,24 @@
 #!/usr/bin/node
+// computes the number of tasks completed by user
+
 const request = require('request');
-const url = 'https://swapi.co/api/films/' + process.argv[2];
+const url = process.argv[2];
+
 request(url, function (error, response, body) {
   if (!error) {
-    let characters = JSON.parse(body).characters;
-    printCharacters(characters, 0);
+    const todos = JSON.parse(body);
+    const completed = {};
+
+    todos.forEach((todo) => {
+      if (todo.completed) {
+        if (completed[todo.userId] === undefined) {
+          completed[todo.userId] = 1;
+        } else {
+          completed[todo.userId] += 1;
+        }
+      }
+    });
+
+    console.log(completed);
   }
 });
-
-function printCharacters (characters, index) {
-  request(characters[index], function (error, response, body) {
-    if (!error) {
-      console.log(JSON.parse(body).name);
-      if (index + 1 < characters.length) {
-        printCharacters(characters, index + 1);
-      }
-    }
-  });
-}
